@@ -252,6 +252,19 @@ a.cred-card { color: var(--text); }
 .prep-list strong { font-weight: 500; font-size: .95rem; }
 .prep-list span { color: var(--muted); font-size: .85rem; }
 
+/* YouTube click-to-play */
+.yt-facade { display: block; background: #000; }
+.yt-facade img { width: 100%; height: 100%; object-fit: cover; padding: 0; border-radius: 0; transition: filter .3s ease; filter: brightness(.8); }
+.yt-facade:hover img { filter: brightness(1); }
+.yt-play {
+  position: absolute; inset: 0; margin: auto; width: 84px; height: 84px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.8rem; padding-left: 6px; color: #0d0d12;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong)); box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transition: transform .2s ease;
+}
+.yt-facade:hover .yt-play { transform: scale(1.08); }
+.video-wrap iframe { width: 100%; height: 100%; border: 0; }
+
 /* Featured project */
 .project-featured { border-color: rgba(165, 148, 211, .45); background: linear-gradient(135deg, rgba(165, 148, 211, .1), var(--surface) 55%); }
 .text-muted-soft { color: var(--muted); }

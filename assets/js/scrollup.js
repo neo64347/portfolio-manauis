@@ -35,6 +35,22 @@
         });
     });
 
+    // YouTube: load the player only when clicked. When the page is opened as a
+    // local file (no referrer, YouTube error 153), the link opens YouTube instead.
+    document.querySelectorAll('.yt-facade').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            if (location.protocol === 'file:') return;
+            e.preventDefault();
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + el.dataset.ytId + '?autoplay=1&rel=0';
+            iframe.title = 'ed-demo';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            iframe.allowFullscreen = true;
+            el.replaceWith(iframe);
+        });
+    });
+
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
