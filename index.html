@@ -263,6 +263,26 @@
 
                 <article class="project" data-aos="fade-up" data-aos-once="true">
                     <div class="project-head">
+                        <span class="project-kind">Thesis</span>
+                        <h3>Smart Grid: IoT-Based Counter Fluctuation Control for Power Distribution</h3>
+                        <p>A home power-distribution panel that monitors voltage and current on each circuit in real time. An Arduino Nano reads the voltage sensor and current clamps, and a Raspberry Pi stores the readings in MariaDB. The Pi switches off any circuit that goes over its limit through solid-state relays and contactors, and sends email alerts. A Node-RED dashboard, later hosted on an Azure VM, shows live gauges, logs and calibration. Rated "Highly Acceptable" (3.63/4) by 25 evaluators. I have since redesigned it on Azure: protection stays on the Pi, and readings go over MQTT/TLS to Azure IoT Hub, with Node-RED dashboards running on Azure Container Apps, history in Azure Data Explorer, and Logic Apps for email and SMS alerts.</p>
+                        <ul class="tags"><li>Arduino (C++)</li><li>Raspberry Pi</li><li>Python</li><li>Node-RED</li><li>MariaDB / MySQL</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Azure VM</li><li>Azure NSG</li><li>Azure IoT Hub</li><li>MQTT</li></ul>
+                        <span class="status-offline"><i class="fas fa-archive me-1" aria-hidden="true"></i>Azure deployment retired: screenshots below</span>
+                        <div class="mt-3"><a class="btn btn-accent btn-sm" href="https://drive.google.com/file/d/13Eh_j_ncl25SOObmM0VOPMgsL89Q9EY0/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-play me-2" aria-hidden="true"></i>Demo video</a>
+                        <a class="btn btn-ghost btn-sm ms-2" href="https://github.com/neo64347/smartgrid-iot-fluctuation-control" target="_blank" rel="noopener"><i class="fab fa-github me-2" aria-hidden="true"></i>Source</a></div>
+                    </div>
+                    <div class="row g-3 row-cols-1 row-cols-sm-2 gallery" data-bss-baguettebox>
+                        <div class="col"><a href="assets/img/iot-architecture-azure.jpg" data-caption="Modernised Azure architecture: edge protection on the Pi, Azure IoT Hub over MQTT/TLS, Device Twin, Azure Data Explorer, Logic Apps alerts, Node-RED on Azure Container Apps"><img src="assets/img/thumbs/iot-architecture-azure.jpg" alt="Modernised Azure IoT architecture diagram" loading="lazy" width="900" height="540" style="object-fit:contain;background:#fff"></a></div>
+                        <div class="col"><a href="assets/img/IoTThesisdrawio1400x800.png" data-caption="Original Azure architecture: Windows 11 VM with Node-RED and Python behind an NSG, MySQL, Azure DNS and email alerts"><img src="assets/img/thumbs/IoTThesis-drawio.jpg" alt="Original Azure architecture diagram for the IoT dashboard" loading="lazy" width="900" height="460" style="object-fit:contain;background:#fff"></a></div>
+                        <div class="col"><a href="assets/img/node21400x800.png" data-caption="Azure portal: the IoT-Thesis virtual machine hosting Node-RED (identifiers redacted)"><img src="assets/img/thumbs/node2.jpg" alt="Azure portal showing the IoT-Thesis virtual machine" loading="lazy" width="900" height="459"></a></div>
+                        <div class="col"><a href="assets/img/node11400x800.png" data-caption="Node-RED dashboard on Azure: calibration settings and live current gauges"><img src="assets/img/thumbs/node1.jpg" alt="Node-RED dashboard calibration page" loading="lazy" width="900" height="459"></a></div>
+                        <div class="col"><a href="assets/img/node31400x800.png" data-caption="Node-RED dashboard on Azure: main breaker gauges and logs"><img src="assets/img/thumbs/node3.jpg" alt="Node-RED dashboard main breaker page" loading="lazy" width="900" height="461"></a></div>
+                        <div class="col"><a href="assets/img/iot-finished-device.jpg" data-caption="Smart Grid prototype: finished power-distribution panel"><img src="assets/img/thumbs/iot-finished-device.jpg" alt="Finished IoT power-distribution panel prototype" loading="lazy" width="288" height="438" style="object-fit:contain;background:#0d0d12"></a></div>
+                    </div>
+                </article>
+
+                <article class="project" data-aos="fade-up" data-aos-once="true">
+                    <div class="project-head">
                         <span class="project-kind">Capstone</span>
                         <h3>E-PR Portal: Procurement Tracker</h3>
                         <p>A web portal for tracking purchase requests from request to approval, with supplier, item and user management. The 2022 original ran on AWS behind a load balancer, with an EC2 web server, RDS MySQL, ACM TLS and a Route 53 domain. In 2026 I rebuilt it as a responsive PHP/MySQL app and redesigned the AWS architecture in Terraform: ECS Fargate across two Availability Zones, RDS MySQL in private subnets, Secrets Manager, and an ALB with ACM and Route 53. GitHub Actions tests every push and deploys through OIDC, with no stored AWS keys.</p>
@@ -275,23 +295,6 @@
                         <div class="col"><a href="assets/img/epr-rebuild-dashboard.jpg" data-caption="E-PR 2026 rebuild: dashboard"><img src="assets/img/thumbs/epr-rebuild-dashboard.jpg" alt="E-PR rebuild dashboard with counters and recent purchase requests" loading="lazy" width="900" height="534"></a></div>
                         <div class="col"><a href="assets/img/epr-rebuild-pr-detail.jpg" data-caption="E-PR 2026 rebuild: purchase request with approve and deny"><img src="assets/img/thumbs/epr-rebuild-pr-detail.jpg" alt="E-PR rebuild purchase request detail page" loading="lazy" width="900" height="534"></a></div>
                         <div class="col"><a href="assets/img/epr-rebuild-mobile.jpg" data-caption="E-PR 2026 rebuild: responsive phone views"><img src="assets/img/thumbs/epr-rebuild-mobile.jpg" alt="E-PR rebuild on four phone screens" loading="lazy" width="900" height="417" style="object-fit:contain;background:#145a32"></a></div>
-                    </div>
-                </article>
-
-                <article class="project" data-aos="fade-up" data-aos-once="true">
-                    <div class="project-head">
-                        <span class="project-kind">Mini Project 2</span>
-                        <h3>E-ML</h3>
-                        <p>A responsive web app hosted on GitHub Pages with Messenger chat integration.</p>
-                        <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JS</li><li>GitHub</li><li>Messenger API</li></ul>
-                        <a class="btn btn-accent btn-sm" href="https://neo64347.github.io/e-ml.io" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2" aria-hidden="true"></i>Live demo</a>
-                        <a class="btn btn-ghost btn-sm ms-2" href="https://github.com/neo64347/e-ml.io" target="_blank" rel="noopener"><i class="fab fa-github me-2" aria-hidden="true"></i>Source</a>
-                    </div>
-                    <div class="row g-3 row-cols-1 row-cols-sm-2 gallery" data-bss-baguettebox>
-                        <div class="col"><a href="assets/img/e-ml11400x800.png" data-caption="E-ML: screen 1"><img src="assets/img/thumbs/e-ml1.jpg" alt="E-ML screenshot 1" loading="lazy" width="900" height="461"></a></div>
-                        <div class="col"><a href="assets/img/e-ml21400x800.png" data-caption="E-ML: screen 2"><img src="assets/img/thumbs/e-ml2.jpg" alt="E-ML screenshot 2" loading="lazy" width="900" height="465"></a></div>
-                        <div class="col"><a href="assets/img/e-ml31400x800.png" data-caption="E-ML: screen 3"><img src="assets/img/thumbs/e-ml3.jpg" alt="E-ML screenshot 3" loading="lazy" width="900" height="465"></a></div>
-                        <div class="col"><a href="assets/img/e-ml41400x800.png" data-caption="E-ML: screen 4"><img src="assets/img/thumbs/e-ml4.jpg" alt="E-ML screenshot 4" loading="lazy" width="900" height="465"></a></div>
                     </div>
                 </article>
 
@@ -314,21 +317,18 @@
 
                 <article class="project" data-aos="fade-up" data-aos-once="true">
                     <div class="project-head">
-                        <span class="project-kind">Thesis</span>
-                        <h3>Smart Grid: IoT-Based Counter Fluctuation Control for Power Distribution</h3>
-                        <p>A home power-distribution panel that monitors voltage and current on each circuit in real time. An Arduino Nano reads the voltage sensor and current clamps, and a Raspberry Pi stores the readings in MariaDB. The Pi switches off any circuit that goes over its limit through solid-state relays and contactors, and sends email alerts. A Node-RED dashboard, later hosted on an Azure VM, shows live gauges, logs and calibration. Rated "Highly Acceptable" (3.63/4) by 25 evaluators. I have since redesigned it on Azure: protection stays on the Pi, and readings go over MQTT/TLS to Azure IoT Hub, with Node-RED dashboards running on Azure Container Apps, history in Azure Data Explorer, and Logic Apps for email and SMS alerts.</p>
-                        <ul class="tags"><li>Arduino (C++)</li><li>Raspberry Pi</li><li>Python</li><li>Node-RED</li><li>MariaDB / MySQL</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Azure VM</li><li>Azure NSG</li><li>Azure IoT Hub</li><li>MQTT</li></ul>
-                        <span class="status-offline"><i class="fas fa-archive me-1" aria-hidden="true"></i>Azure deployment retired: screenshots below</span>
-                        <div class="mt-3"><a class="btn btn-accent btn-sm" href="https://drive.google.com/file/d/13Eh_j_ncl25SOObmM0VOPMgsL89Q9EY0/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-play me-2" aria-hidden="true"></i>Demo video</a>
-                        <a class="btn btn-ghost btn-sm ms-2" href="https://github.com/neo64347/smartgrid-iot-fluctuation-control" target="_blank" rel="noopener"><i class="fab fa-github me-2" aria-hidden="true"></i>Source</a></div>
+                        <span class="project-kind">Mini Project 2</span>
+                        <h3>E-ML</h3>
+                        <p>A responsive web app hosted on GitHub Pages with Messenger chat integration.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JS</li><li>GitHub</li><li>Messenger API</li></ul>
+                        <a class="btn btn-accent btn-sm" href="https://neo64347.github.io/e-ml.io" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2" aria-hidden="true"></i>Live demo</a>
+                        <a class="btn btn-ghost btn-sm ms-2" href="https://github.com/neo64347/e-ml.io" target="_blank" rel="noopener"><i class="fab fa-github me-2" aria-hidden="true"></i>Source</a>
                     </div>
                     <div class="row g-3 row-cols-1 row-cols-sm-2 gallery" data-bss-baguettebox>
-                        <div class="col"><a href="assets/img/iot-architecture-azure.jpg" data-caption="Modernised Azure architecture: edge protection on the Pi, Azure IoT Hub over MQTT/TLS, Device Twin, Azure Data Explorer, Logic Apps alerts, Node-RED on Azure Container Apps"><img src="assets/img/thumbs/iot-architecture-azure.jpg" alt="Modernised Azure IoT architecture diagram" loading="lazy" width="900" height="540" style="object-fit:contain;background:#fff"></a></div>
-                        <div class="col"><a href="assets/img/IoTThesisdrawio1400x800.png" data-caption="Original Azure architecture: Windows 11 VM with Node-RED and Python behind an NSG, MySQL, Azure DNS and email alerts"><img src="assets/img/thumbs/IoTThesis-drawio.jpg" alt="Original Azure architecture diagram for the IoT dashboard" loading="lazy" width="900" height="460" style="object-fit:contain;background:#fff"></a></div>
-                        <div class="col"><a href="assets/img/node21400x800.png" data-caption="Azure portal: the IoT-Thesis virtual machine hosting Node-RED (identifiers redacted)"><img src="assets/img/thumbs/node2.jpg" alt="Azure portal showing the IoT-Thesis virtual machine" loading="lazy" width="900" height="459"></a></div>
-                        <div class="col"><a href="assets/img/node11400x800.png" data-caption="Node-RED dashboard on Azure: calibration settings and live current gauges"><img src="assets/img/thumbs/node1.jpg" alt="Node-RED dashboard calibration page" loading="lazy" width="900" height="459"></a></div>
-                        <div class="col"><a href="assets/img/node31400x800.png" data-caption="Node-RED dashboard on Azure: main breaker gauges and logs"><img src="assets/img/thumbs/node3.jpg" alt="Node-RED dashboard main breaker page" loading="lazy" width="900" height="461"></a></div>
-                        <div class="col"><a href="assets/img/iot-finished-device.jpg" data-caption="Smart Grid prototype: finished power-distribution panel"><img src="assets/img/thumbs/iot-finished-device.jpg" alt="Finished IoT power-distribution panel prototype" loading="lazy" width="288" height="438" style="object-fit:contain;background:#0d0d12"></a></div>
+                        <div class="col"><a href="assets/img/e-ml11400x800.png" data-caption="E-ML: screen 1"><img src="assets/img/thumbs/e-ml1.jpg" alt="E-ML screenshot 1" loading="lazy" width="900" height="461"></a></div>
+                        <div class="col"><a href="assets/img/e-ml21400x800.png" data-caption="E-ML: screen 2"><img src="assets/img/thumbs/e-ml2.jpg" alt="E-ML screenshot 2" loading="lazy" width="900" height="465"></a></div>
+                        <div class="col"><a href="assets/img/e-ml31400x800.png" data-caption="E-ML: screen 3"><img src="assets/img/thumbs/e-ml3.jpg" alt="E-ML screenshot 3" loading="lazy" width="900" height="465"></a></div>
+                        <div class="col"><a href="assets/img/e-ml41400x800.png" data-caption="E-ML: screen 4"><img src="assets/img/thumbs/e-ml4.jpg" alt="E-ML screenshot 4" loading="lazy" width="900" height="465"></a></div>
                     </div>
                 </article>
             </div>
