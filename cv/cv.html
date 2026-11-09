@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>John Ed A. Manauis CV</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink: #1b1a24; --muted: #5d5c70; --accent: #6b55c4; --line: #e4e1f0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Poppins", Arial, sans-serif; color: var(--ink); font-size: 9.2pt; line-height: 1.45; background: #fff; }
+  .page { width: 210mm; min-height: 297mm; padding: 14mm 15mm 12mm; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--accent); padding-bottom: 4mm; margin-bottom: 5mm; }
+  h1 { margin: 0; font-size: 22pt; letter-spacing: .01em; line-height: 1.1; }
+  .role { margin: 1.5mm 0 0; font-size: 11pt; color: var(--accent); font-weight: 600; }
+  .contact { text-align: right; font-size: 8.4pt; color: var(--muted); line-height: 1.6; }
+  .contact a { color: var(--ink); text-decoration: none; }
+  .grid { display: grid; grid-template-columns: 1fr 60mm; gap: 8mm; }
+  h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin: 0 0 2.5mm; padding-bottom: 1mm; border-bottom: 1px solid var(--line); }
+  section { margin-bottom: 5mm; }
+  p { margin: 0 0 2mm; }
+  .job { margin-bottom: 3.5mm; }
+  .job-head { display: flex; justify-content: space-between; gap: 4mm; }
+  .job h3 { margin: 0; font-size: 10pt; }
+  .org { color: var(--muted); font-weight: 500; }
+  .when { color: var(--muted); font-size: 8.4pt; white-space: nowrap; }
+  ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+  li { margin-bottom: .8mm; }
+  .cert { margin-bottom: 2.4mm; }
+  .cert strong { display: block; font-size: 8.8pt; line-height: 1.35; }
+  .cert span { color: var(--muted); font-size: 8pt; }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+  .tags span { font-size: 7.8pt; padding: .5mm 2mm; border-radius: 3mm; background: #f1eefb; color: #4b3a99; }
+  .skill-group { margin-bottom: 2.6mm; }
+  .skill-group b { display: block; font-size: 8.4pt; margin-bottom: 1mm; }
+  .proj h3 { margin: 0; font-size: 9.4pt; }
+  .proj { margin-bottom: 2.6mm; }
+  .proj .stack { color: var(--muted); font-size: 8pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>John Ed A. Manauis</h1>
+      <p class="role">DevOps Engineer · Cloud &amp; Observability</p>
+    </div>
+    <div class="contact">
+      Philippines<br>
+      <a href="https://www.linkedin.com/in/johnedmanauis/">linkedin.com/in/johnedmanauis</a><br>
+      <a href="https://github.com/neo64347">github.com/neo64347</a><br>
+      <a href="https://neo64347.github.io/portfolio-manauis/">neo64347.github.io/portfolio-manauis</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <main>
+      <section>
+        <h2>Summary</h2>
+        <p>AWS Certified DevOps Engineer – Professional with 5+ years in IT, moving from IT support and system administration into software engineering and DevOps. I focus on AWS cloud infrastructure, Kubernetes and observability with Grafana, Loki and Prometheus, and I use Terraform to manage infrastructure as code.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="job">
+          <div class="job-head"><h3>DevOps Engineer <span class="org">· EasyEquities</span></h3><span class="when">Jul 2025 – Present</span></div>
+          <ul>
+            <li>Build and support AWS cloud infrastructure and delivery pipelines for EasyEquities' investing platform. Remote, Philippines.</li>
+            <li>Work on container platforms, CI/CD and observability for production services.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Software Engineer <span class="org">· Accenture in the Philippines</span></h3><span class="when">Mar 2025 – Jul 2025</span></div>
+          <ul>
+            <li>Built logging and monitoring with Grafana Loki and Prometheus.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Associate Software Engineer <span class="org">· Accenture in the Philippines</span></h3><span class="when">Jan 2023 – Feb 2025</span></div>
+          <ul>
+            <li>Worked on Kubernetes-based workloads and Grafana dashboards for platform monitoring.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>IT Support <span class="org">· Southern Luzon State University</span></h3><span class="when">Feb 2021 – Dec 2022</span></div>
+          <ul>
+            <li>Provided IT support and network and system administration for the university's hybrid cloud environment.</li>
+            <li>Administered Sangfor HCI and Windows Server 2012 R2 infrastructure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+        <div class="proj">
+          <h3>Grafana Observability Stack on AWS ECS</h3>
+          <p>Terraform deployment of Grafana, Prometheus, Loki and Grafana Alloy on ECS Fargate, with an ALB, Cloud Map service discovery, EFS-backed configs, ECR, S3 and IAM.</p>
+          <span class="stack">Terraform · AWS ECS / ECR / S3 / EFS / ALB · Grafana · Loki · Prometheus · Alloy</span>
+        </div>
+        <div class="proj">
+          <h3>IoT Counter Fluctuation Control for Power Distribution (Thesis)</h3>
+          <p>IoT monitoring dashboard hosted on an Azure VM.</p>
+          <span class="stack">Node-RED · Python · MySQL · Azure VM / NSG</span>
+        </div>
+        <div class="proj">
+          <h3>E-PR Procurement Tracker Portal (Capstone)</h3>
+          <p>PHP web portal deployed on AWS with a load-balanced EC2 web server, a custom domain and TLS.</p>
+          <span class="stack">PHP · MySQL · AWS EC2 / ELB / Route 53 / ACM</span>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Certifications</h2>
+        <div class="cert"><strong>AWS Certified DevOps Engineer – Professional</strong><span>AWS · May 2025 – May 2028</span></div>
+        <div class="cert"><strong>AWS Certified SysOps Administrator – Associate</strong><span>AWS · May 2026 – May 2028</span></div>
+        <div class="cert"><strong>AWS Certified Developer – Associate</strong><span>AWS · May 2026 – May 2028</span></div>
+        <div class="cert"><strong>AWS Certified Cloud Practitioner</strong><span>AWS</span></div>
+        <div class="cert"><strong>HashiCorp Certified: Terraform Associate (003)</strong><span>HashiCorp · Jun 2024 (expired)</span></div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-group"><b>Cloud</b><div class="tags"><span>AWS</span><span>EC2</span><span>ECS</span><span>S3</span><span>IAM</span><span>Route 53</span><span>ALB</span><span>Azure</span></div></div>
+        <div class="skill-group"><b>DevOps &amp; IaC</b><div class="tags"><span>CI/CD</span><span>Terraform</span><span>Docker</span><span>Kubernetes</span></div></div>
+        <div class="skill-group"><b>Observability</b><div class="tags"><span>Grafana</span><span>Loki</span><span>Prometheus</span><span>Alloy</span></div></div>
+        <div class="skill-group"><b>Infrastructure</b><div class="tags"><span>Network Admin</span><span>System Admin</span><span>Windows Server</span><span>Sangfor HCI</span></div></div>
+        <div class="skill-group"><b>Development</b><div class="tags"><span>Python</span><span>Bash</span><span>MySQL</span><span>HTML/CSS/JS</span><span>PHP</span></div></div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Industrial Technology</strong><br><span style="color:var(--muted)">Major in Computer Technology</span></p>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
